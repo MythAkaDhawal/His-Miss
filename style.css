@@ -1,0 +1,208 @@
+body{
+
+margin:0;
+
+font-family:Arial;
+
+text-align:center;
+
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd1dc);
+
+background-size:400% 400%;
+
+animation:bgmove 10s infinite alternate;
+
+color:white;
+
+}
+
+
+/* animated background */
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+
+100%{background-position:100% 50%;}
+
+}
+
+
+/* sections */
+
+#welcome,
+#message,
+#memories,
+#final{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+/* button */
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+background:white;
+
+color:#ff4b7d;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+/* videos */
+
+.video-gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+width:90%;
+
+max-width:1000px;
+
+}
+
+
+video{
+
+width:100%;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+
+/* hearts */
+
+.heart{
+
+position:fixed;
+
+bottom:-20px;
+
+animation:float 6s linear;
+
+}
+
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+
+/* cake animation */
+
+.cake{
+
+font-size:80px;
+
+animation:bounce 1.5s infinite;
+
+}
+
+
+@keyframes bounce{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-15px)}
+
+100%{transform:translateY(0)}
+
+}
+.fade-in{
+animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+video{
+opacity:0;
+animation:videoFade 1s forwards;
+}
+
+video:nth-child(1){animation-delay:0.3s;}
+video:nth-child(2){animation-delay:0.6s;}
+video:nth-child(3){animation-delay:0.9s;}
+video:nth-child(4){animation-delay:1.2s;}
+video:nth-child(5){animation-delay:1.5s;}
+video:nth-child(6){animation-delay:1.8s;}
+video:nth-child(7){animation-delay:2.1s;}
+video:nth-child(8){animation-delay:2.4s;}
+video:nth-child(9){animation-delay:2.7s;}
+video:nth-child(10){animation-delay:3s;}
+
+@keyframes videoFade{
+to{
+opacity:1;
+transform:scale(1);
+}
+}

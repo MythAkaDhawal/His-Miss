@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Constellation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <p class="dot"></p>
+      <p class="dot"></p>
+      <p class="dot"></p>
+      <h1>Birthday Memory Suite</h1>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Memory Constellation 🎞️</h2>
+        <p>Instead of a regular gallery, your videos orbit like stars. Tap any card to play.</p>
+      </div>
+
+      <div id="constellation" class="constellation" aria-label="Birthday memory videos"></div>
+
+      <nav class="cta-row">
+        <a class="btn ghost" href="letter.html">Back to Letter</a>
+        <a class="btn" href="finale.html">Final Birthday Wish</a>
+      </nav>
+    </section>
+  </main>
+
+  <div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="video-modal-content">
+      <button id="closeVideo" class="close-btn" aria-label="Close video">×</button>
+      <h3 id="videoTitle"></h3>
+      <video id="focusVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
